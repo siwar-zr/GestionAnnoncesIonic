@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Listes des annonces à Vendre
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/ajout" [routerLink]="['/ajout']">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="bg-img">
+
+    <ion-card *ngFor="let annonce of allAnnonces">
+      <ion-item-sliding>
+        <ion-item *ngIf(annonce.cat="A vendre" )>
+          <ion-label>{{annonce.name}}: {{annonce.prix}}</ion-label>
+          <ion-buttons slot="end">
+            <ion-button (click)="onDelete(annonce.id)">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-card>
+
+
+
+
+  </div>
+</ion-content>

@@ -1,0 +1,19 @@
+.bg-img {
+    padding: 1px;
+    height: 100%;
+    width: 100%;
+    //background-color: red;
+    background-image: url("../../assets/images/background-home.jpg");
+    //background-repeat: repeat-y;
+    background-size: cover;
+}
+
+
+.wrapContent {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
